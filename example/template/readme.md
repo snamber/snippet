@@ -114,6 +114,8 @@ of the respective language into `example/testdata`, updating `example/template`,
 
 ## Examples
 
+The folder `test` contains an example where a snippet extracts part of a tested piece of code.
+
 Here we see sample output of `snippet`, with snippets defined in `example/testdata`, and the template for this file defined in `example/template`.
 
 C

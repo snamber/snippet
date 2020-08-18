@@ -114,12 +114,12 @@ of the respective language into `example/testdata`, updating `example/template`,
 
 ## Examples
 
+The folder `test` contains an example where a snippet extracts part of a tested piece of code.
+
 Here we see sample output of `snippet`, with snippets defined in `example/testdata`, and the template for this file defined in `example/template`.
 
 C
 ```c
-#include
-
 int main(void)
 {
     puts("Hello, world!");
@@ -128,8 +128,6 @@ int main(void)
 
 C++
 ```cpp
-#include
-
 int main()
 {
     std::cout << "Hello, world!";
@@ -139,10 +137,6 @@ int main()
 
 Go
 ```go
-package main
-
-import "fmt"
-
 func main(){
 	fmt.Println("Hello, World!")
 }
@@ -160,9 +154,7 @@ console.log("Hello, World!")
 
 Kotlin
 ```kotlin
-fun main(args: Array<String>) {
-    println("Hello World!")
-}
+println("Hello World!")
 ```
 
 Python

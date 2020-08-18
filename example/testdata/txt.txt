@@ -1,3 +1,5 @@
+<unquoted text here>
+
 // START SNIPPET txt
 Hello, World!
 // END SNIPPET

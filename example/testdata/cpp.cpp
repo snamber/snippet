@@ -1,6 +1,6 @@
-// START SNIPPET cpp
 #include
 
+// START SNIPPET cpp
 int main()
 {
     std::cout << "Hello, world!";
