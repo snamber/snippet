@@ -58,7 +58,7 @@ Tags can contain letters, digits, `_` and `-`. Spacing matters.
 
 To mark a location into which a snippet should be expanded, write a line like
 ```md
-// PUT SNIPPET tag
+// PUT SNIPPET tag　
 ```
 Reference the respective tag. Markdown does not have comments: Use `//` as a comment prefix in Markdown.
 
@@ -77,7 +77,7 @@ For the following definition
 ```
 and the following use
 ```md
-// PUT SNIPPET tag
+// PUT SNIPPET tag　
 ```
 would result in this expanded snippet
 ```go
@@ -102,7 +102,6 @@ Currently snippet supports the following file extensions, with the associated si
 .py:   "#"
 .ts:   "//"
 .sh:   "//"
-.rst:  ".."
 .txt:  "//"
 ```
 

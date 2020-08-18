@@ -77,6 +77,15 @@ func Test_parser_snippetStart(t *testing.T) {
 				tag:          "foo-bar_baz123",
 			},
 			want1: true,
+		}, {
+			name:   "white-space at the end",
+			parser: goParser,
+			args:   args{line: "  // START SNIPPET foo-bar_baz123  \t"},
+			want: metadata{
+				sourceIndent: "  ",
+				tag:          "foo-bar_baz123",
+			},
+			want1: true,
 		},
 	}
 	for _, tt := range tests {
@@ -253,6 +262,20 @@ func Test_parser_snippetLocation1(t *testing.T) {
 			want:  "  ",
 			want1: "foobar",
 			want2: true,
+		}, {
+			name:  "white-space at the end",
+			p:     goParser,
+			args:  args{line: "  // PUT SNIPPET foobar\t "},
+			want:  "  ",
+			want1: "foobar",
+			want2: true,
+		}, {
+			name:  "unicode-space at the end",
+			p:     goParser,
+			args:  args{line: "  // PUT SNIPPET foobar　"},
+			want:  "",
+			want1: "",
+			want2: false,
 		}, {
 			p:     goParser,
 			args:  args{line: "  // END SNIPPET"},

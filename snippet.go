@@ -115,9 +115,9 @@ func newParser(extension string) (parser, error) {
 		return parser{}, errors.Wrapf(errNoParserForExtension, "cannot create parser for file extension %s", extension)
 	}
 
-	startStr := fmt.Sprintf(`([ \t]*)%s START SNIPPET ([a-zA-Z0-9_-]+)`, prefix)
-	endStr := fmt.Sprintf(`[ \t]*%s END SNIPPET`, prefix)
-	locationStr := fmt.Sprintf(`([ \t]*)%s PUT SNIPPET ([a-zA-Z0-9_-]+)`, prefix)
+	startStr := fmt.Sprintf(`^([ \t]*)%s START SNIPPET ([a-zA-Z0-9_-]+)[ \t]*$`, prefix)
+	endStr := fmt.Sprintf(`^[ \t]*%s END SNIPPET[ \t]*$`, prefix)
+	locationStr := fmt.Sprintf(`^([ \t]*)%s PUT SNIPPET ([a-zA-Z0-9_-]+)[ \t]*$`, prefix)
 
 	return parser{
 		start:         regexp.MustCompile(startStr),

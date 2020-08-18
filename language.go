@@ -13,6 +13,5 @@ var commentPrefixMap = map[string]string{
 	".py":   "#",
 	".ts":   "//",
 	".sh":   "//",
-	".rst":  "..",
 	".txt":  "//",
 }
